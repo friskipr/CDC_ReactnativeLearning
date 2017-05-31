@@ -54,3 +54,6 @@ fastlane/screenshots
 
 # notes
 todo.list
+
+# visual code
+.vscode
