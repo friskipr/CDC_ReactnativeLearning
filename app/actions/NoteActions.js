@@ -18,3 +18,23 @@ export function removeNote(id) {
         }
     })
 }
+
+export function viewNote(id) {
+    return ({
+        type: C.VIEW_NOTE,
+        payload: {
+            id: id
+        }
+    })
+}
+
+export function editNote(id, title, note) {
+    return ({
+        type: C.EDIT_NOTE,
+        payload: {
+            id: id,
+            title: title,
+            note: note
+        }
+    })
+}

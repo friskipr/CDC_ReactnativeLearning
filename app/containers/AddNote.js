@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Home from '../components/home-view/Home'
+import Home from '../components/notes-view/AddNote'
 import * as actions from '../actions/NoteActions'
 
 const mapStateToProps = () => ({
