@@ -24,18 +24,6 @@ const notes = (state = initialState, action) => {
             let notes = state.filter((x) => x.id !== action.payload.id);
             return notes;
         
-        case C.EDIT_NOTE:
-            return state.map(x =>
-                x.id === action.payload.id ?
-                    {
-                        ...x, 
-                        title: action.payload.title,
-                        note: action.payload.note
-
-                    } : 
-                    x
-                )
-            
         default:
             return state;
     }

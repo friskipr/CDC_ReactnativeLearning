@@ -1,6 +1,5 @@
 import React from 'react'
 import { Text, TouchableHighlight, View, Alert } from 'react-native'
-import { Actions } from 'react-native-router-flux'
 import Styles from './styles'
 
 let deleteAlert = (handler, id) => {
@@ -20,19 +19,15 @@ let deleteAlert = (handler, id) => {
     )
 }
 
-let handleView = (value) => {    
-    Actions.pageThree({ title: value.title, id: value.id })
-}
-
-const Note = ({value, onDelete}) => (    
+const Note = ({value, onDelete}) => (
     <TouchableHighlight 
-        style={Styles.note}
-        underlayColor='#E0E0E0'
-        onPress={ () => { handleView(value)} }
-        onLongPress={ () => deleteAlert(onDelete, value.id) }
+        style={Styles.note} 
+        onPress={() => deleteAlert(onDelete, value.id)}
     >
-        <View>            
-            <Text>{value.title}</Text>            
+        <View>
+            <Text>{value.id}</Text>
+            <Text>{value.title}</Text>
+            <Text>{value.note}</Text>
         </View>
     </TouchableHighlight>
 )
