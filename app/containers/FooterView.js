@@ -5,13 +5,12 @@ import {
   View,
   Image
 } from 'react-native';
-import Styles from '../styles/HomeStyles';
 
 export default class Footer extends Component {
     render() {
         return (
-            <View style={Styles.footer}>
-                <Greeting style={Styles.time} />
+            <View>
+                <Greeting />
             </View>
         );
     }
